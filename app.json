@@ -2,6 +2,10 @@
   "expo": {
     "name": "chat-app",
     "slug": "chat-app",
+    "androidStatusBar": {
+      "barStyle": "dark-content",
+      "backgroundColor": "#FFFFFF"
+      },
     "platforms": [
       "ios",
       "android",

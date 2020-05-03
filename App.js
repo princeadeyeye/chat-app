@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Status from './components/Status'
 
 export default class App extends Component {
     renderMessageList() {
@@ -22,6 +23,7 @@ export default class App extends Component {
     render() {
       return (
         <View style={styles.container}>
+        <Status isConnectedColor='blue' notConnectedColor='red' />
           {this.renderMessageList()}
           {this.renderToolbar()}
           {this.renderInputMethodEditor()}
@@ -34,7 +36,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  content: {
+    flex: 1,
+  },
+  toolbar: {
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(0,0,0,0.04)',
+    backgroundColor: 'white',
+  },
+  inputMethodEditor: {
+    flex: 1,
+  }
 });
